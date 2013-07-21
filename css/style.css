@@ -1,0 +1,31 @@
+@import url("bootstrap.min.css");
+@import url("bootstrap-responsive.min.css");
+@import url("font-awesome.css");
+@import url("modules.css");
+/* ===== Primary Styles ========================================================
+   Author: Oren Farhi, http://orizens.com
+   ========================================================================== */
+/* Application */
+.nicer-ux *,
+.ux-maker {
+	-webkit-transition: all .3s ease-out;
+	-moz-transition:    all .3s ease-out;
+	-ms-transition:     all .3s ease-out;
+	-o-transition:      all .3s ease-out;
+	transition:         all .3s ease-out;
+}
+/* Application */
+.persons-list .person-card {
+	border-bottom: 1px solid #aaa;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: grab;
+	box-shadow: 0 0 0 rgba(0,0,0, .3);
+}
+
+.persons-list .person-card:hover {
+	box-shadow: 0 2px 13px -1px rgba(0,0,0,.3);
+}
+.persons-list .person-card [class^="-show-lead"] {
+	display: none;
+}
