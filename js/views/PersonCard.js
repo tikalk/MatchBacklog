@@ -8,7 +8,7 @@ define([
     var PerosnCard = Backbone.View.extend({
 		tagName: 'li',
 		
-		className: 'person-card well ux-maker',
+		className: 'person-card nicer-ux',
 		
 		template: _.template(PersonCardHtml),
 

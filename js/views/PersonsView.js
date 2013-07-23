@@ -25,22 +25,18 @@ define([
 			this.views = {
 				news: new PersonsList({
 					el: this.$('#new')
-					// collection: this.collection
-				}),
-
-				pending: new PersonsList({
-					el: this.$('#pending')
-					// collection: this.collection
-				}),
-
-				inp: new PersonsList({
-					el: this.$('#inp')
-					// collection: this.collection
 				}),
 
 				match: new PersonsList({
 					el: this.$('#match')
-					// collection: this.collection
+				}),
+
+				decision: new PersonsList({
+					el: this.$('#decision')
+				}),
+
+				pending: new PersonsList({
+					el: this.$('#pending')
 				})
 			};
 			this.listenTo(this.collection, 'reset change destroy sort', this.render);
@@ -49,9 +45,9 @@ define([
 
 		render: function() {
 			this.views.news.collection.reset(this.collection.where({ backlog_status: "1.New" }));
-			this.views.pending.collection.reset(this.collection.where({ backlog_status: "2.PendingReassignment" }));
-			this.views.inp.collection.reset(this.collection.where({ backlog_status: "3.InProcess" }));
-			this.views.match.collection.reset(this.collection.where({ backlog_status: "3.Match" }));
+			this.views.decision.collection.reset(this.collection.where({ backlog_status: "3.Decision" }));
+			this.views.pending.collection.reset(this.collection.where({ backlog_status: "4.Pending" }));
+			this.views.match.collection.reset(this.collection.where({ backlog_status: "2.Match" }));
 		}
 
 	});
