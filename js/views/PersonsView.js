@@ -39,7 +39,7 @@ define([
 					el: this.$('#pending')
 				})
 			};
-			this.listenTo(this.collection, 'reset change destroy sort', this.render);
+			this.listenTo(this.collection, 'reset change destroy sort add remove', this.render);
 			this.collection.fetch({ reset: true });
 		},
 

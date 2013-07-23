@@ -3,14 +3,9 @@ define([
 	'underscore',
 	'backbone',
 
-	'beamer',
-	'collectionView',
 	'views/PersonsView'
 ], function(
 	$, _, Backbone, 
-	// extensions
-	beamer, collectionView,
-
 	PersonsView
 	) {
    

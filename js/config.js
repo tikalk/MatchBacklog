@@ -15,33 +15,33 @@ require.config({
 			exports: '_'
 		},
 
-		'backbone': {
+		'backbonesrc': {
 			deps: [ 'underscore', 'jquery'],
 			exports: 'Backbone'
 		},
 
 		'safe': {
-			deps: [ 'underscore', 'backbone' ],
+			deps: [ 'underscore', 'backbonesrc' ],
 			exports: 'Backbone.Safe'
 		},
 
 		'switcher': {
-			deps: [ 'underscore', 'backbone', 'beamer' ],
+			deps: [ 'underscore', 'backbonesrc', 'beamer' ],
 			exports: 'Backbone'
 		},
 
 		'transition': {
-			deps: [ 'underscore', 'backbone', 'beamer' ],
+			deps: [ 'underscore', 'backbonesrc', 'beamer' ],
 			exports: 'Backbone'
 		},
 
 		'collectionView': {
-			deps: [ 'underscore', 'backbone', 'beamer' ],
+			deps: [ 'underscore', 'backbonesrc', 'beamer' ],
 			exports: 'Backbone'
 		},
 
 		'beamer': {
-			deps: [ 'underscore', 'backbone' ],
+			deps: [ 'underscore', 'backbonesrc' ],
 			exports: 'Backbone'
 		}
 	},
@@ -52,7 +52,8 @@ require.config({
 		jqueryui: 'libs/jquery/jquery-ui',
 		bootstrap: 'libs/bootstrap/bootstrap.min',
 		underscore: 'libs/underscore/underscore',
-		backbone: 'libs/backbone/backbone',
+		backbonesrc: 'libs/backbone/backbone',
+		backbone: 'libs/backbone/backbonepkg',
 		
 		// backbone plugins
 		safe: 'libs/backbone/backbone.safe',

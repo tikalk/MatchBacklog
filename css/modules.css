@@ -8133,7 +8133,11 @@ a.badge:focus {
   -webkit-text-shadow: 1px 1px 1px #ffffff;
   -moz-text-shadow: 1px 1px 1px #ffffff;
   text-shadow: 1px 1px 1px #ffffff;
+  -webkit-box-shadow: 0px 2px 1px -1px #ffffff;
+  -moz-box-shadow: 0px 2px 1px -1px #ffffff;
+  box-shadow: 0px 2px 1px -1px #ffffff;
   font-family: Cuprum;
+  border-bottom: 1px solid #333;
 }
 .persons-list .person-card .match-status-Not {
   background-color: #bdc5cd;

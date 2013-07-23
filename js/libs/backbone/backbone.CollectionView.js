@@ -84,9 +84,12 @@
 			key: 'view',
 			extension: CollectionView,
 			initialize: function () {
-				// this.listenTo(this.collection, 'reset destroy add remove sort', function(){
-				// 	this.render();
-				// });
+				this.listenTo(this.collection, 'add', function(model){
+					this.$target.append(this.renderItem(model));
+				});
+				this.listenTo(this.collection, 'remove', function(model){
+					this.render();
+				});
 				this.listenTo(this.collection, 'reset change destroy sort', function(){
 					this.render();
 				});
