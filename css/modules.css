@@ -8133,6 +8133,7 @@ a.badge:focus {
   -webkit-text-shadow: 1px 1px 1px #ffffff;
   -moz-text-shadow: 1px 1px 1px #ffffff;
   text-shadow: 1px 1px 1px #ffffff;
+  font-family: Cuprum;
 }
 .persons-list .person-card .match-status-Not {
   background-color: #bdc5cd;
@@ -8210,4 +8211,7 @@ a.badge:focus {
 }
 .persons-list .person-card [class^="-show-lead"] {
   display: none;
+}
+.board h2 {
+  font-family: Gudea;
 }
