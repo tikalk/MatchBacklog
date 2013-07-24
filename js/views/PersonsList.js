@@ -15,11 +15,6 @@ define([
 			// collection: YoutubeSearchResultsList
 		},
 
-		// transition: {
-		// 	duration: 200,
-		// 	css: 'transition-in'
-		// },
-
 		initialize: function() {
 			this.listenTo(this, 'view-after:render', this.renderTitle);
 		},

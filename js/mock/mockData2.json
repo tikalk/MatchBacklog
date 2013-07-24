@@ -54,7 +54,7 @@
 	{
 		"backlog_status": "2.Match",
 		"backlog_type": "2",
-		"domain": "ALM",
+		"domain": "JAVA",
 		"recruitment_status": "match",
 		"candidate_name": "Liel Ran",
 		"candidate_weeks_age": "-3",
@@ -80,7 +80,7 @@
 	{
 		"backlog_status": "2.Match",
 		"backlog_type": "2",
-		"domain": "ALM",
+		"domain": "JAVA",
 		"recruitment_status": "hired",
 		"candidate_name": "Gil Shinar",
 		"candidate_weeks_age": "1",
@@ -119,7 +119,7 @@
 	{
 		"backlog_status": "4.Pending",
 		"backlog_type": "1",
-		"domain": "ALM",
+		"domain": "Ruby",
 		"recruitment_status": "match",
 		"candidate_name": "Vlad Aginsky",
 		"candidate_weeks_age": "-2",
@@ -132,7 +132,7 @@
 	{
 		"backlog_status": "4.Pending",
 		"backlog_type": "3",
-		"domain": "JS",
+		"domain": ".Net",
 		"recruitment_status": "",
 		"candidate_name": "",
 		"candidate_weeks_age": "0",

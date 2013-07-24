@@ -11,34 +11,6 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
 article,
 aside,
 details,
@@ -6976,6 +6948,34 @@ a.badge:focus {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 @-ms-viewport {
   width: device-width;
 }
@@ -8099,6 +8099,11 @@ a.badge:focus {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.tooltip {
+  font-family: Arial;
+  text-shadow: none;
+  font-weight: normal;
+}
 .persons-list .person-card .card {
   cursor: -webkit-grab;
   cursor: -moz-grab;
@@ -8215,6 +8220,19 @@ a.badge:focus {
 }
 .persons-list .person-card [class^="-show-lead"] {
   display: none;
+}
+#domain-filter {
+  margin-top: 0;
+}
+.import-actions button {
+  position: relative;
+}
+.import-actions input {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .board h2 {
   font-family: Gudea;

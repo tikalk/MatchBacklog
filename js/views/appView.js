@@ -3,10 +3,14 @@ define([
 	'underscore',
 	'backbone',
 
-	'views/PersonsView'
+	'views/PersonsView',
+	'views/DomainFilter',
+	'views/ImportView'
 ], function(
 	$, _, Backbone, 
-	PersonsView
+	PersonsView,
+	DomainFilter,
+	ImportView
 	) {
    
 	var AppView = Backbone.View.extend({
@@ -17,6 +21,14 @@ define([
 				workers: new PersonsView({ 
 					model: this.model,
 					collection: this.model.get('workers')
+				}),
+
+				domainFilter: new DomainFilter({
+					model: this.model
+				}),
+
+				importView: new ImportView({
+					model: this.model
 				})
 			};
 		}
