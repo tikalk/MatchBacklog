@@ -15,9 +15,6 @@ define([
 		},
 
 		initialize: function() {
-			
-			// this.listenTo(this.collection, 'reset change destroy sort add remove', this.render);
-			// this.collection.fetch({ reset: true });
 		},
 
 		onFilterClick: function (ev) {
