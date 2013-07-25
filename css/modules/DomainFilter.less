@@ -1,6 +1,17 @@
 #domain-filter {
+	margin-top: 0;
+
 	.btn-group {
 		margin-top: 0;
 	}
-	margin-top: 0;
+
+	button[value='clear'] {
+		display: none;
+	}
+
+	&.filtered {
+		button[value='clear'] {
+			display: inline;
+		}
+	}
 }

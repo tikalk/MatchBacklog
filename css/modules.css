@@ -8227,6 +8227,12 @@ a.badge:focus {
 #domain-filter .btn-group {
   margin-top: 0;
 }
+#domain-filter button[value='clear'] {
+  display: none;
+}
+#domain-filter.filtered button[value='clear'] {
+  display: inline;
+}
 .import-actions button {
   position: relative;
 }
