@@ -11,16 +11,6 @@ define([
 
 		el: '.boards',
 
-		// view: {
-		// 	type: PersonCard
-		// 	// collection: YoutubeSearchResultsList
-		// },
-
-		// transition: {
-		// 	duration: 200,
-		// 	css: 'transition-in'
-		// },
-
 		initialize: function() {
 			this.views = {
 				news: new PersonsList({

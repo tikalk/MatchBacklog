@@ -12,7 +12,6 @@ define([
 		view: {
 			type: PersonCard,
 			target: '.persons-list'
-			// collection: YoutubeSearchResultsList
 		},
 
 		initialize: function() {

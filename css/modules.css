@@ -8237,6 +8237,9 @@ a.badge:focus {
   left: 0;
   top: 0;
 }
+.board#new [class*="lead"] {
+  display: none;
+}
 .board h2 {
   font-family: Gudea;
 }
