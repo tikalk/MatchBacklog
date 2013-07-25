@@ -19,7 +19,8 @@ define([
 			var file = ev.target.files[0],
 				reader = new FileReader();
 			reader.onload = _.bind(function (event) {
-				this.model.get('workers').reset(JSON.parse(event.target.result));
+				var json = _(event.target.result).csvToJSON();
+				this.model.get('workers').reset(json.rows);
 			}, this);
 			reader.readAsText(file);
 		}

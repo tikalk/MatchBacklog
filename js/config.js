@@ -64,6 +64,7 @@ require.config({
 
 		text: 'libs/require/text',
 		utils: 'libs/utils',
+		csvjson: 'libs/csvjson',
 
 		templates: '../templates'
 	},

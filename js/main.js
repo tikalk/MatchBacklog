@@ -3,10 +3,11 @@ require([
 	'bootstrap',
 	// 'safe',
 	// 'switcher',
+	'utils',
 	'views/appView',
 	'models/appModel',
 	'routers/appRouter'
-], function( $, bootstrap, 
+], function( $, bootstrap, utils,
 	// safe, switcher, 
 	AppView, AppModel, AppRouter ) {
 	// var appModel = new AppModel();

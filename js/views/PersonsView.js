@@ -41,7 +41,7 @@ define([
 			};
 			this.filteredPersons = new Backbone.Collection();
 			this.listenTo(this.collection, 'reset change destroy sort add remove', this.render);
-			this.listenTo(this.model.get('domains'), 'add remove', this.filterPersons);
+			this.listenTo(this.model.get('domains'), 'add remove reset', this.filterPersons);
 			this.collection.fetch({ reset: true });
 		},
 

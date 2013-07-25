@@ -11,7 +11,8 @@ define([
 		el: '#domain-filter',
 
 		events: {
-			"mouseup .btn": "onFilterClick"
+			"click .btn-group .btn": "onFilterClick",
+			"click [value='clear']": "clearFilter"
 		},
 
 		initialize: function() {
@@ -21,6 +22,11 @@ define([
 			var filter = $(ev.target).val();
 			var enable = !$(ev.target).hasClass('active');
 			this.model.get('domains').update(filter, enable);
+		},
+
+		clearFilter: function(ev){
+			this.$('.btn-group .btn').removeClass('active');
+			this.model.get('domains').reset();	
 		}
 	});
 

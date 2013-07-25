@@ -15,7 +15,7 @@
 	{
 		"backlog_status": "1.New",
 		"backlog_type": "1",
-		"domain": "JS",
+		"domain": "JavaScript",
 		"recruitment_status": "hired",
 		"candidate_name": "Gil Shinar",
 		"candidate_weeks_age": "1",
@@ -41,7 +41,7 @@
 	{
 		"backlog_status": "2.Match",
 		"backlog_type": "2",
-		"domain": "JS",
+		"domain": "JavaScript",
 		"recruitment_status": "hired",
 		"candidate_name": "Miron Gofer",
 		"candidate_weeks_age": "-8",
@@ -67,7 +67,7 @@
 	{
 		"backlog_status": "2.Match",
 		"backlog_type": "2",
-		"domain": "JS",
+		"domain": "JavaScript",
 		"recruitment_status": "match",
 		"candidate_name": "Liel Ran",
 		"candidate_weeks_age": "-3",
@@ -93,7 +93,7 @@
 	{
 		"backlog_status": "3.Decision",
 		"backlog_type": "2",
-		"domain": "JS",
+		"domain": "JavaScript",
 		"recruitment_status": "hired",
 		"candidate_name": "Miron Gofer",
 		"candidate_weeks_age": "-8",
@@ -132,7 +132,7 @@
 	{
 		"backlog_status": "4.Pending",
 		"backlog_type": "3",
-		"domain": "JS",
+		"domain": "JavaScript",
 		"recruitment_status": "",
 		"candidate_name": "",
 		"candidate_weeks_age": "0",
