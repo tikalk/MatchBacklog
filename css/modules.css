@@ -11243,33 +11243,144 @@ a.badge:focus {
 .persons-list .person-card .card .age {
   display: none;
 }
-/* line 26, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000326}}
+/* line 25, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000325}}
+.persons-list .person-card .card.card-type-lead {
+  background-color: #ecf7fe;
+  background-image: -moz-linear-gradient(top, #ffffff, #d0ecfd);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#d0ecfd));
+  background-image: -webkit-linear-gradient(top, #ffffff, #d0ecfd);
+  background-image: -o-linear-gradient(top, #ffffff, #d0ecfd);
+  background-image: linear-gradient(to bottom, #ffffff, #d0ecfd);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffd0ecfd', GradientType=0);
+  background-color: #d0ecfd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffffff), to(#d0ecfd));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#ffffff, #d0ecfd);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#ffffff, #d0ecfd);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #d0ecfd));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#ffffff, #d0ecfd);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#ffffff, #d0ecfd);
+  /* Opera 11.10 */
+
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #d0ecfd 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(#ffffff, #d0ecfd);
+  /* the standard */
+
+}
+/* line 29, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000329}}
 .persons-list .person-card .card.card-type-lead .lead-age {
   display: inline;
 }
-/* line 30, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000330}}
+/* line 33, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000333}}
 .persons-list .person-card .card.card-type-lead .lead-info {
   display: none;
 }
-/* line 36, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000336}}
+/* line 38, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000338}}
+.persons-list .person-card .card.card-type-candidate {
+  background-color: #ffcbc1;
+  background-image: -moz-linear-gradient(top, #ffe5e0, #ffa494);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffe5e0), to(#ffa494));
+  background-image: -webkit-linear-gradient(top, #ffe5e0, #ffa494);
+  background-image: -o-linear-gradient(top, #ffe5e0, #ffa494);
+  background-image: linear-gradient(to bottom, #ffe5e0, #ffa494);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffe5e0', endColorstr='#ffffa494', GradientType=0);
+  background-color: #ffa494;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffe5e0), to(#ffa494));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#ffe5e0, #ffa494);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#ffe5e0, #ffa494);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffe5e0), color-stop(100%, #ffa494));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#ffe5e0, #ffa494);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#ffe5e0, #ffa494);
+  /* Opera 11.10 */
+
+  background-image: -ms-linear-gradient(top, #ffe5e0 0%, #ffa494 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(#ffe5e0, #ffa494);
+  /* the standard */
+
+}
+/* line 42, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000342}}
 .persons-list .person-card .card.card-type-candidate .candidate-age {
   display: inline;
 }
-/* line 40, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000340}}
+/* line 46, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000346}}
 .persons-list .person-card .card.card-type-candidate .lead-info {
   display: none;
 }
-/* line 46, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000346}}
+/* line 51, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000351}}
+.persons-list .person-card .card.card-type-match {
+  background-color: #90dab1;
+  background-image: -moz-linear-gradient(top, #a7e1c1, #6dce98);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#a7e1c1), to(#6dce98));
+  background-image: -webkit-linear-gradient(top, #a7e1c1, #6dce98);
+  background-image: -o-linear-gradient(top, #a7e1c1, #6dce98);
+  background-image: linear-gradient(to bottom, #a7e1c1, #6dce98);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa7e1c1', endColorstr='#ff6dce98', GradientType=0);
+  background-color: #6dce98;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#a7e1c1), to(#6dce98));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#a7e1c1, #6dce98);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#a7e1c1, #6dce98);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a7e1c1), color-stop(100%, #6dce98));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#a7e1c1, #6dce98);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#a7e1c1, #6dce98);
+  /* Opera 11.10 */
+
+  background-image: -ms-linear-gradient(top, #a7e1c1 0%, #6dce98 100%);
+  /* IE10+ */
+
+  background-image: linear-gradient(#a7e1c1, #6dce98);
+  /* the standard */
+
+}
+/* line 55, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000355}}
 .persons-list .person-card .card.card-type-match .candidate-age {
   display: inline;
 }
-/* line 51, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000351}}
+/* line 60, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000360}}
 .persons-list .person-card .card h4 {
   -webkit-text-shadow: 1px 1px 1px #ffffff;
   -moz-text-shadow: 1px 1px 1px #ffffff;
@@ -11281,104 +11392,67 @@ a.badge:focus {
   border-bottom: 1px solid #333;
   margin-top: 16px;
 }
-/* line 60, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000360}}
-.persons-list .person-card .match-status-Not {
-  background-color: #bdc5cd;
-  background-image: -moz-linear-gradient(top, #ced4db, #a3aeba);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ced4db), to(#a3aeba));
-  background-image: -webkit-linear-gradient(top, #ced4db, #a3aeba);
-  background-image: -o-linear-gradient(top, #ced4db, #a3aeba);
-  background-image: linear-gradient(to bottom, #ced4db, #a3aeba);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffced4db', endColorstr='#ffa3aeba', GradientType=0);
-  background-color: #a3aeba;
-  background-repeat: repeat-x;
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#ced4db), to(#a3aeba));
-  /* Konqueror */
-
-  background-image: -moz-linear-gradient(#ced4db, #a3aeba);
-  /* FF 3.6+ */
-
-  background-image: -ms-linear-gradient(#ced4db, #a3aeba);
-  /* IE10 */
-
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ced4db), color-stop(100%, #a3aeba));
-  /* Safari 4+, Chrome 2+ */
-
-  background-image: -webkit-linear-gradient(#ced4db, #a3aeba);
-  /* Safari 5.1+, Chrome 10+ */
-
-  background-image: -o-linear-gradient(#ced4db, #a3aeba);
-  /* Opera 11.10 */
-
-  background-image: -ms-linear-gradient(top, #ced4db 0%, #a3aeba 100%);
-  /* IE10+ */
-
-  background-image: linear-gradient(#ced4db, #a3aeba);
-  /* the standard */
-
-}
-/* line 65, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000365}}
+/* line 74, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000374}}
 .persons-list .person-card .badges {
   position: absolute;
   top: -3px;
   right: 10px;
   text-align: right;
 }
-/* line 71, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000371}}
+/* line 80, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000380}}
 .persons-list .person-card .badges .employ-badge {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   background-color: whitesmoke;
   color: black;
 }
-/* line 77, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000377}}
+/* line 86, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000386}}
 .persons-list .person-card .badges .domain {
   border-radius: 0;
   border-width: 2px;
   padding: 5px 7px;
 }
-/* line 83, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000383}}
+/* line 92, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000392}}
 .persons-list .person-card .badges .domain.domain-JavaScript {
   border-color: #547a7d;
 }
-/* line 87, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000387}}
+/* line 96, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000396}}
 .persons-list .person-card .badges .domain.domain-ALM {
   border-color: #c42a44;
 }
-/* line 91, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000391}}
+/* line 100, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003100}}
 .persons-list .person-card .badges .domain.domain-ror {
   border-color: #726869;
 }
-/* line 95, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000395}}
+/* line 104, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003104}}
 .persons-list .person-card .badges .domain.domain-java {
   border-color: #552439;
 }
-/* line 99, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\0000399}}
+/* line 108, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003108}}
 .persons-list .person-card .badges .domain.domain-net {
   border-color: #e05e46;
 }
-/* line 105, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003105}}
+/* line 114, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003114}}
 .persons-list .person-card .tikal-logo {
   display: none;
   height: 24px;
   margin-top: -1px;
 }
-/* line 113, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003113}}
+/* line 122, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003122}}
 .persons-list .person-card .recruit-status-hired .tikal-logo {
   display: inline-block;
 }
-/* line 119, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003119}}
+/* line 128, /Users/farhioren/Documents/Github/matchbacklog/css/modules/PersonCard.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/modules\/PersonCard\.less}line{font-family:\00003128}}
 .persons-list .person-card [class^="-show-lead"] {
   display: none;
 }

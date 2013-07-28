@@ -23,6 +23,9 @@
 			}
 
 			&.card-type-lead {
+				@color: lightskyblue;
+				#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%));
+
 				.lead-age {
 					display: inline;
 				}
@@ -33,6 +36,9 @@
 			}
 
 			&.card-type-candidate {
+				@color: tomato;
+				#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%));
+
 				.candidate-age {
 					display: inline;
 				}
@@ -43,6 +49,9 @@
 			}
 
 			&.card-type-match {
+				@color: mediumseagreen;
+				#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%));
+
 				.candidate-age {
 					display: inline;
 				}
@@ -57,10 +66,10 @@
 			}
 		}
 
-		.match-status-Not {
-			@not-active: lightslategray;
-			#gradient > .vertical(lighten(@not-active, 30%), lighten(@not-active,15%));
-		}
+		// .match-status-Not {
+		// 	@not-active: lightslategray;
+		// 	#gradient > .vertical(lighten(@not-active, 30%), lighten(@not-active,15%));
+		// }
 
 		.badges {
 			position: absolute;
