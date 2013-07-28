@@ -29,9 +29,10 @@ define([
 					el: this.$('#pending')
 				})
 			};
-			
+
 			this.listenTo(this.collection, 'reset change destroy sort add remove', this.render);
 			this.listenTo(this.model.get('domains'), 'add remove reset', this.filterPersons);
+			this.listenTo(this.model.get('match'), 'add remove reset', this.filterPersons);
 			this.collection.fetch({ reset: true });
 		},
 
@@ -49,13 +50,22 @@ define([
 		filterPersons: function () {
 			var hasFilters = this.model.get('domains').length;
 			var domains = this.model.get('domains');
-			var filteredPersons;
+			var match = this.model.get('match');
+			var filteredPersons = this.collection.models;
 
 			// the 'domains' id's are those to be rendered
 			if (domains.length) {	
 				filteredPersons = this.collection.filter(function(person){
 					return domains.where({ "id": person.get('domain') }).length;
 				});
+			}
+			if (match.length) {
+				filteredPersons = _.filter(filteredPersons, function(person) {
+					return match.where({ "id": person.get('match_status')}).length;
+				});
+			}
+
+			if (filteredPersons) {
 				this.update(new Backbone.Collection(filteredPersons));
 				return;
 			}

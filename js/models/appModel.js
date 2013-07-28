@@ -3,22 +3,19 @@ define([
 	'backbone',
 
 	'collections/PersonCollection',
-	'collections/DomainsCollection'
+	'collections/DomainsCollection',
+	'collections/MatchCollection'
 ], function(_, Backbone, 
 		PersonCollection,
-		DomainsCollection
+		DomainsCollection,
+		MatchCollection
 	) {
 
 	var AppModel = Backbone.Model.extend({
 		defaults: {
 			workers: new PersonCollection(),
-			domains: new DomainsCollection([
-				// { domain: "JS" } , 
-				// { domain: "NET" },
-				// { domain: "RoR" },
-				// { domain: "JAVA" },
-				// { domain: "ALM" }
-			])
+			domains: new DomainsCollection(),
+			match: new MatchCollection()
 		},
 
 		// safe: 'matchBacklog',

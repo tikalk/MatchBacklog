@@ -6,9 +6,6 @@ define([
     var FilterModel = Backbone.Model.extend({
 		defaults: {
 			id: ''
-		},
-
-		initialize: function() {
 		}
 	});
    

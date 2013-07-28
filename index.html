@@ -30,12 +30,23 @@
 							 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand"> <i class="icon-check"></i>MatchBacklog</a>
 							<div class="nav-collapse collapse navbar-responsive-collapse">
 								
-								<div class="nav">
+								<div class="nav data-filter">
 									<a class="navbar-text">
-										<i class="icon-filter"></i> Filter:
+										<i class="icon-filter"></i> Domain:
 									</a>
 
 									<div id="domain-filter" class="btn-group">
+										<div class="btn-group" data-toggle="buttons-checkbox"></div>
+										<button class="btn btn-link clear-filter" value="clear">clear</button>
+									</div>
+								</div>
+
+								<div class="nav data-filter">
+									<a class="navbar-text">
+										<i class="icon-filter"></i> Match Status:
+									</a>
+
+									<div id="match-filter" class="btn-group">
 										<div class="btn-group" data-toggle="buttons-checkbox"></div>
 										<button class="btn btn-link clear-filter" value="clear">clear</button>
 									</div>

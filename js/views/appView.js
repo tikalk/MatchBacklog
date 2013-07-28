@@ -5,12 +5,14 @@ define([
 
 	'views/PersonsView',
 	'views/DomainFilter',
-	'views/ImportView'
+	'views/ImportView',
+	'views/MatchFilter'
 ], function(
 	$, _, Backbone, 
 	PersonsView,
 	DomainFilter,
-	ImportView
+	ImportView,
+	MatchFilter
 	) {
    
 	var AppView = Backbone.View.extend({
@@ -28,6 +30,10 @@ define([
 				}),
 
 				importView: new ImportView({
+					model: this.model
+				}),
+
+				matchFilter: new MatchFilter({
 					model: this.model
 				})
 			};
