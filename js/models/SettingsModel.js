@@ -9,7 +9,7 @@ define([
 			show_settings: false
 		},
 
-		// safe: 'settings'
+		safe: 'mb-settings'
 	});
    
     return SettingsModel;

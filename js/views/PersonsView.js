@@ -34,12 +34,13 @@ define([
 			// this.listenTo(this.collection, 'change', this.renderChange);
 			this.listenTo(this.model.get('domains'), 'add remove reset', this.filterPersons);
 			this.listenTo(this.model.get('match'), 'add remove reset', this.filterPersons);
-			this.listenTo(this.model.get('settings'), 'change', this.updateBySettings);
+			this.listenTo(this.model.get('settings'), 'change', this.onSettingsChange);
 			this.collection.fetch({ reset: true });
 		},
 
 		render: function() {
 			this.update(this.collection);
+			this.updateBySettings();
 		},
 
 		// renderChange: function(model){
@@ -83,17 +84,22 @@ define([
 
 		},
 
-		updateBySettings: function(settings){
+		onSettingsChange: function(settings){
 			if (settings.hasChanged('backlog_url')) {
+				this.updateBySettings();
+				this.render();
+			}
+		},
 
-				var urls = {
-					backlog_url: settings.get('backlog_url')
-				}
+		updateBySettings: function(){
+			var urls = {
+				backlog_url: this.model.get('settings').get('backlog_url')
+			}
+			if (urls.backlog_url) {
+
 				this.collection.each(function(person){
 					person.set(urls);
 				});
-
-				this.render();
 			}
 		}
 

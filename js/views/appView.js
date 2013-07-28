@@ -48,7 +48,7 @@ define([
 				}),
 
 				settingsView: new SettingsView({
-					model: this.model
+					model: this.model.get('settings')
 				}),
 
 				settingsToggle: new SettingsToggle({

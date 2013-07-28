@@ -17,23 +17,28 @@ define([
 
 		initialize: function() {
 			this.toggle();
-			this.listenTo(this.model.get('settings'), 'change:show_settings', this.toggle);
+			this.renderUrl();
+			this.listenTo(this.model, 'change:show_settings', this.toggle);
+		},
+
+		renderUrl: function(){
+			this.$('.url').val(this.model.get('backlog_url'));
 		},
 
 		handleSubmit: function(ev){
 			ev.preventDefault();
 			// update all models
-			this.model.get('settings').set({
+			this.model.set({
 				backlog_url: this.$('.url').val()
 			});
 			this.close();
 		},
 		close: function(ev){
-			this.model.get('settings').set('show_settings', false);
+			this.model.set('show_settings', false);
 		},
 		
 		toggle: function(){
-			this.$el.toggleClass('hide', !this.model.get('settings').get('show_settings'));
+			this.$el.toggleClass('hide', !this.model.get('show_settings'));
 		}
 
 	});
