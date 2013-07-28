@@ -17,9 +17,16 @@ define([
 
 		handleFileUpload: function (ev) {
 			var file = ev.target.files[0],
-				reader = new FileReader();
+				reader = new FileReader(),
+				settings = this.model.get('settings');
 			reader.onload = _.bind(function (event) {
 				var json = _(event.target.result).csvToJSON();
+				// update json with backlog_uri
+				_.each(json.rows, function(row){
+					row.backlog_url = settings.get('backlog_url');
+					row.backlog_uri = settings.get('backlog_uri');
+				});
+				// update the model 
 				this.model.get('workers').reset(json.rows);
 			}, this);
 			reader.readAsText(file);

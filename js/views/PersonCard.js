@@ -23,12 +23,12 @@ define([
 		},
 
 		initialize: function() {
-			// this.listenTo(this.model, 'change:isPlaying', this.render);
+			this.listenTo(this.model, 'change', this.render);
 		},
 
 		render: function() {
 			this.$el.html( this.template(this.model.toJSON()) );
-			this.$('[data-toggle="tooltip"]').tooltip();
+			this.$('[data-toggle="tooltip"]').tooltip('destroy').tooltip();
 			return this;
 		}
 	});

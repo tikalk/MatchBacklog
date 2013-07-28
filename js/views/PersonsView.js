@@ -30,15 +30,24 @@ define([
 				})
 			};
 
-			this.listenTo(this.collection, 'reset change destroy sort add remove', this.render);
+			this.listenTo(this.collection, 'reset destroy sort add remove', this.render);
+			// this.listenTo(this.collection, 'change', this.renderChange);
 			this.listenTo(this.model.get('domains'), 'add remove reset', this.filterPersons);
 			this.listenTo(this.model.get('match'), 'add remove reset', this.filterPersons);
+			this.listenTo(this.model.get('settings'), 'change', this.updateBySettings);
 			this.collection.fetch({ reset: true });
 		},
 
 		render: function() {
 			this.update(this.collection);
 		},
+
+		// renderChange: function(model){
+		// 	console.log('model changed', model);
+		// 	_.each(this.views, function(view){
+		// 		view.collection.set([model]);
+		// 	});
+		// },
 
 		update: function(persons) {
 			this.views.news.collection.reset(persons.where({ backlog_status: "1.New" }));
@@ -72,6 +81,21 @@ define([
 			// if domains is empty than all persons should be shown
 			this.render();
 
+		},
+
+		updateBySettings: function(settings){
+			if (settings.hasChanged('backlog_url') || settings.hasChanged('backlog_uri')) {
+
+				var urls = {
+					backlog_url: settings.get('backlog_url'),
+					backlog_uri: settings.get('backlog_uri')
+				}
+				this.collection.each(function(person){
+					person.set(urls);
+				});
+
+				this.render();
+			}
 		}
 
 	});
