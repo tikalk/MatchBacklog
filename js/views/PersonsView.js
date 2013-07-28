@@ -29,7 +29,7 @@ define([
 					el: this.$('#pending')
 				})
 			};
-			this.filteredPersons = new Backbone.Collection();
+			
 			this.listenTo(this.collection, 'reset change destroy sort add remove', this.render);
 			this.listenTo(this.model.get('domains'), 'add remove reset', this.filterPersons);
 			this.collection.fetch({ reset: true });
@@ -49,6 +49,7 @@ define([
 		filterPersons: function () {
 			var hasFilters = this.model.get('domains').length;
 			var domains = this.model.get('domains');
+			var filteredPersons;
 
 			// the 'domains' id's are those to be rendered
 			if (domains.length) {	

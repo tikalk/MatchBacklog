@@ -8128,8 +8128,14 @@ a.badge:focus {
 .persons-list .person-card .card.card-type-lead .lead-age {
   display: inline;
 }
+.persons-list .person-card .card.card-type-lead .lead-info {
+  display: none;
+}
 .persons-list .person-card .card.card-type-candidate .candidate-age {
   display: inline;
+}
+.persons-list .person-card .card.card-type-candidate .lead-info {
+  display: none;
 }
 .persons-list .person-card .card.card-type-match .candidate-age {
   display: inline;
@@ -8143,6 +8149,7 @@ a.badge:focus {
   box-shadow: 0px 2px 1px -1px #ffffff;
   font-family: Cuprum;
   border-bottom: 1px solid #333;
+  margin-top: 16px;
 }
 .persons-list .person-card .match-status-Not {
   background-color: #bdc5cd;
@@ -8242,9 +8249,6 @@ a.badge:focus {
   position: absolute;
   left: 0;
   top: 0;
-}
-.board#new [class*="lead"] {
-  display: none;
 }
 .board h2 {
   font-family: Gudea;
