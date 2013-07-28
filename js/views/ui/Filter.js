@@ -2,32 +2,35 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
-	'text!templates/matchFilter.html'
+	'text!templates/filter.html'
 ], function($, _, Backbone,
-	matchFilter
+	
+	filterHtml
 	) {
 	
-	var MatchFilter = Backbone.View.extend({
-
-		el: '#match-filter',
+	var Filter = Backbone.View.extend({
 
 		events: {
 			"click .btn-group .btn": "onFilterClick",
 			"click [value='clear']": "clearFilter"
 		},
 
-		template: _.template(matchFilter),
+		template: _.template(filterHtml),
 
 		initialize: function() {
+			this.filters = this.options.filters;
+			// the attr to be displayed and extracted from the collection
+			this.filter = this.options.filter;
+			// TODO: this view is restricted to a btn group
 			this.$filters = this.$('.btn-group');
-			this.listenTo(this.model.get('workers'), 'reset add remove change', this.renderFilters);
+			this.listenTo(this.collection, 'reset add remove change', this.renderFilters);
 			// active filters model
-			this.listenTo(this.model.get('match'), 'reset add remove', this.updateFilterState);
+			this.listenTo(this.filters, 'reset add remove', this.updateFilterState);
 		},
 
 		renderFilters: function(){
-			var domains = _.chain(this.model.get('workers').toJSON())
-				.pluck('match_status')
+			var domains = _.chain(this.collection.toJSON())
+				.pluck(this.filter)
 				.uniq()
 				.value();
 
@@ -37,15 +40,15 @@ define([
 		},
 
 		preRenderFilter: function(filter) {
-			var active = false;//this.model.get('domains').get(domain) ? 'active' : '';
+			//this.model.get('domains').get(domain) ? 'active' : '';
+			var active = this.filters.get(filter) ? 'active' : '';;
 			return this.template({ filter: filter, active: active });
 		},
 
 		onFilterClick: function (ev) {
 			var filter = $(ev.target).val();
 			var enable = !$(ev.target).hasClass('active');
-			var hasFilters = false;
-			this.model.get('match').update(filter, enable);
+			this.filters.update(filter, enable);
 		},
 
 		updateFilterState: function (filter, domains) {
@@ -54,9 +57,9 @@ define([
 
 		clearFilter: function(ev){
 			this.$('.btn-group .btn').removeClass('active');
-			this.model.get('match').reset();	
+			this.filters.reset();	
 		}
 	});
 
-	return MatchFilter;
+	return Filter;
 });

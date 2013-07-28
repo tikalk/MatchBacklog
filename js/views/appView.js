@@ -4,20 +4,19 @@ define([
 	'backbone',
 
 	'views/PersonsView',
-	'views/DomainFilter',
 	'views/ImportView',
-	'views/MatchFilter',
 	'views/SettingsView',
-	'views/SettingsToggle'
+	'views/SettingsToggle',
+	'views/ui/Filter',
 
 ], function(
 	$, _, Backbone, 
 	PersonsView,
-	DomainFilter,
 	ImportView,
-	MatchFilter,
 	SettingsView,
-	SettingsToggle
+	SettingsToggle,
+
+	Filter
 	) {
    
 	var AppView = Backbone.View.extend({
@@ -30,16 +29,22 @@ define([
 					collection: this.model.get('workers')
 				}),
 
-				domainFilter: new DomainFilter({
-					model: this.model
+				domainFilter: new Filter({
+					el: '#domain-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('domains'),
+					filter: 'domain'
 				}),
 
 				importView: new ImportView({
 					model: this.model
 				}),
 
-				matchFilter: new MatchFilter({
-					model: this.model
+				matchFilter: new Filter({
+					el: '#match-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('match'),
+					filter: 'match_status'
 				}),
 
 				settingsView: new SettingsView({

@@ -3,23 +3,21 @@ define([
 	'backbone',
 
 	'collections/PersonCollection',
-	'collections/DomainsCollection',
-	'collections/MatchCollection',
+	'collections/FilterCollection',
 
 	'models/SettingsModel'
 ], function(_, Backbone, 
 		PersonCollection,
-		DomainsCollection,
-		MatchCollection,
-
+		FilterCollection,
+		
 		SettingsModel
 	) {
 
 	var AppModel = Backbone.Model.extend({
 		defaults: {
 			workers: new PersonCollection(),
-			domains: new DomainsCollection(),
-			match: new MatchCollection(),
+			domains: new FilterCollection(),
+			match: new FilterCollection(),
 			settings: new SettingsModel()
 		},
 
