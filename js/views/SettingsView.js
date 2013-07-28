@@ -24,8 +24,7 @@ define([
 			ev.preventDefault();
 			// update all models
 			this.model.get('settings').set({
-				backlog_url: this.$('.url').val(),
-				backlog_uri: this.$('.uri').val()
+				backlog_url: this.$('.url').val()
 			});
 			this.close();
 		},

@@ -6,7 +6,6 @@ define([
     var SettingsModel = Backbone.Model.extend({
 		defaults: {
 			backlog_url: '',
-			backlog_uri: '',
 			show_settings: false
 		},
 

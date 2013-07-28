@@ -84,11 +84,10 @@ define([
 		},
 
 		updateBySettings: function(settings){
-			if (settings.hasChanged('backlog_url') || settings.hasChanged('backlog_uri')) {
+			if (settings.hasChanged('backlog_url')) {
 
 				var urls = {
-					backlog_url: settings.get('backlog_url'),
-					backlog_uri: settings.get('backlog_uri')
+					backlog_url: settings.get('backlog_url')
 				}
 				this.collection.each(function(person){
 					person.set(urls);
