@@ -43,7 +43,7 @@ define([
 				}),
 
 				importServer: new ImportServer({
-					model: this.model.get('workers')
+					collection: this.model.get('workers')
 				}),
 
 				matchFilter: new Filter({
