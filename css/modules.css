@@ -11,44 +11,6 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-/* line 12, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\0000312}}
-.clearfix {
-  *zoom: 1;
-}
-/* line 14, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\0000314}}
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-/* line 22, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\0000322}}
-.clearfix:after {
-  clear: both;
-}
-/* line 106, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\00003106}}
-.hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-/* line 154, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\00003154}}
-.input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
 /* line 10, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/reset.less */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/reset\.less}line{font-family:\0000310}}
 article,
@@ -9556,6 +9518,44 @@ a.badge:focus {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+/* line 12, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\0000312}}
+.clearfix {
+  *zoom: 1;
+}
+/* line 14, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\0000314}}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+/* line 22, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\0000322}}
+.clearfix:after {
+  clear: both;
+}
+/* line 106, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\00003106}}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+/* line 154, /Users/farhioren/Documents/Github/matchbacklog/css/bootstrap/mixins.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/farhioren\/Documents\/Github\/matchbacklog\/css\/bootstrap\/mixins\.less}line{font-family:\00003154}}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 @-ms-viewport {
   width: device-width;
 }

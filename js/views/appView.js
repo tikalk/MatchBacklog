@@ -5,6 +5,7 @@ define([
 
 	'views/PersonsView',
 	'views/ImportView',
+	'views/ImportServer',
 	'views/SettingsView',
 	'views/SettingsToggle',
 	'views/ui/Filter',
@@ -13,6 +14,7 @@ define([
 	$, _, Backbone, 
 	PersonsView,
 	ImportView,
+	ImportServer,
 	SettingsView,
 	SettingsToggle,
 
@@ -38,6 +40,10 @@ define([
 
 				importView: new ImportView({
 					model: this.model
+				}),
+
+				importServer: new ImportServer({
+					model: this.model.get('workers')
 				}),
 
 				matchFilter: new Filter({
