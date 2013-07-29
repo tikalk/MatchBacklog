@@ -7,6 +7,8 @@
 	.person-card {
 		.card {
 			@radius: 5px;
+			@color: silver;
+			
 			.cursor(grab);
 			.box-shadow(0px 3px 2px -2px @shadow-color);
 			position: relative;
@@ -16,6 +18,7 @@
 			margin-bottom: 10px;
 			border-top-left-radius: @radius;
 			border-bottom-left-radius: @radius;
+			#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%)); 
 
 			&:hover {
 				.box-shadow(0 2px 13px -1px @shadow-color);
@@ -123,7 +126,7 @@
 
 		.match-status {
 			&.match-Not {
-				color: yellow;
+				display: none;
 			}
 		}
 
