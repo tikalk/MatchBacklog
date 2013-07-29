@@ -1,6 +1,7 @@
 define([
 	'jquery',
-	'underscore'
+	'underscore',
+	'csvjson'
 ], function($, _) {
    
 	var Utils = {
@@ -15,6 +16,10 @@ define([
 				height = window.innerHeight - $('.navbar').outerHeight() - $('.youtube-player').outerHeight(),
 				width = window.innerWidth - sidebar;
 			return _.clone({ height: height, width: width });
+		},
+
+		csvToJSON: function (csv) {
+			return csvjson.csv2json(csv);
 		}
 	};
    

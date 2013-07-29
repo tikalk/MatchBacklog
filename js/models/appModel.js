@@ -2,17 +2,26 @@ define([
 	'underscore',
 	'backbone',
 
-	'collections/PersonCollection'
+	'collections/PersonCollection',
+	'collections/FilterCollection',
+
+	'models/SettingsModel'
 ], function(_, Backbone, 
-		PersonCollection
+		PersonCollection,
+		FilterCollection,
+		
+		SettingsModel
 	) {
 
 	var AppModel = Backbone.Model.extend({
 		defaults: {
-			workers: new PersonCollection()
+			workers: new PersonCollection(),
+			domains: new FilterCollection(),
+			match: new FilterCollection(),
+			settings: new SettingsModel()
 		},
 
-		safe: 'matchBacklog',
+		// safe: 'matchBacklog',
 
 		initialize: function() {
 			

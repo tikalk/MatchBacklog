@@ -15,6 +15,9 @@ define([
 			"lead_weeks_age": "0",
 			"assigned_user_name": "avirams",
 
+			// custom fields
+			backlog_url: '',
+
 			// generated for display purposes
 			candidate_weeks_age_display: '',
 			lead_weeks_age_display: '',

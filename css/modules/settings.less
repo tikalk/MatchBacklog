@@ -1,0 +1,44 @@
+// settings button on top toolbar
+.settings {
+	&.nav {
+		margin-left: 10px;
+	}
+
+	
+}
+
+#settings {
+	display: block;
+	position: absolute;
+	width: auto;
+	z-index: 10;
+	right: 0;
+	top: -32px;
+
+	&.hide {
+		top: -200px;
+	}
+}
+
+@media (max-width: 979px) {
+	#settings {
+		position: static;
+		right: auto;
+		top: auto;
+		&.hide {
+			top:auto;
+			display: none;
+		}
+	}
+
+}
+.navbar {
+	z-index: 20;
+	position: relative;
+}
+
+.settings-container {
+	.span12 {
+		position: relative;
+	}
+}

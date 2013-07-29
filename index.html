@@ -29,68 +29,43 @@
 						<div class="container-fluid">
 							 <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="#" class="brand"> <i class="icon-check"></i>MatchBacklog</a>
 							<div class="nav-collapse collapse navbar-responsive-collapse">
-								<ul class="nav">
-									<li class="active">
-										<a href="#">Home</a>
-									</li>
-									<li>
-										<a href="#">Link</a>
-									</li>
-									<li>
-										<a href="#">Link</a>
-									</li>
-									<li class="dropdown">
-										 <a data-toggle="dropdown" class="dropdown-toggle" href="#">Sort<strong class="caret"></strong></a>
-										<ul class="dropdown-menu">
-											<li>
-												<a href="#">domain</a>
-											</li>
-											<li>
-												<a href="#">recruitment status</a>
-											</li>
-											<li>
-												<a href="#">candidates weeks age</a>
-											</li>
-											<li class="divider">
-											</li>
-											<li class="nav-header">
-												lead
-											</li>
-											<li>
-												<a href="#">lead 's initiative</a>
-											</li>
-											<li>
-												<a href="#">lead's age</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-								<ul class="nav pull-right">
-									<li>
-										<a href="#">Link</a>
-									</li>
-									<li class="divider-vertical">
-									</li>
-									<li class="dropdown">
-										 <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown<strong class="caret"></strong></a>
-										<ul class="dropdown-menu">
-											<li>
-												<a href="#">Action</a>
-											</li>
-											<li>
-												<a href="#">Another action</a>
-											</li>
-											<li>
-												<a href="#">Something else here</a>
-											</li>
-											<li class="divider">
-											</li>
-											<li>
-												<a href="#">Separated link</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
+								
+								<div class="nav data-filter">
+									<a class="navbar-text">
+										<i class="icon-filter"></i> Domain:
+									</a>
+
+									<div id="domain-filter" class="btn-group">
+										<div class="btn-group" data-toggle="buttons-checkbox"></div>
+										<button class="btn btn-link clear-filter" value="clear">clear</button>
+									</div>
+								</div>
+
+								<div class="nav data-filter">
+									<a class="navbar-text">
+										<i class="icon-filter"></i> Match Status:
+									</a>
+
+									<div id="match-filter" class="btn-group">
+										<div class="btn-group" data-toggle="buttons-checkbox"></div>
+										<button class="btn btn-link clear-filter" value="clear">clear</button>
+									</div>
+								</div>
+
+								<div id="settings-toggle" class="nav settings pull-right">
+									
+								  	<button class="btn"><i class="icon-gear"></i></button>
+
+								</div>
+
+								<div class="nav import-actions pull-right">
+								  <button id="import-manager" class="btn btn-primary" title="Import New CSV">
+								  	<i class="icon-signin"></i><input type="file" >
+								  </button>
+								  <button id="import-server" class="btn btn-primary" title="Import data from server">
+								  	<i class="icon-building"></i>
+								  </button>
+								</div>
 							</div>
 							
 						</div>
@@ -100,7 +75,17 @@
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row settings-container">
+
+			<div class="span12">
+				<form id="settings" class="hide form-inline well ux-maker">
+					<button type="button" class="close">&times;</button>
+					<h2>Settings</h2>
+					<h3>Update Links to Candidates System</h3>
+				  <input type="text" class="url input-small span4" placeholder="url">
+				  <button type="submit" class="btn">Store</button>
+				</form>
+			</div>
 
 		</div>
 

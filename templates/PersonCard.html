@@ -1,11 +1,14 @@
-<div class="card match-status-<%= match_status %> recruit-status-<%= recruitment_status %> card-type-<%= backlog_type_label %>">
+<div class="card ux-maker match-status-<%= match_status %> recruit-status-<%= recruitment_status %> card-type-<%= backlog_type_label %>">
 	<h4>
-		<i title="<%= backlog_type_label %>" class="icon-<%= backlog_type_display %>"></i> <strong><%- person_name_display %></strong>
+		<i data-toggle="tooltip" title="<%= backlog_type_label %>" class="icon-<%= backlog_type_display %>"></i>
+		<a href="<%= backlog_url %><%= backlog_uri %>" data-toggle="tooltip" title="open employee card in tikal's system">
+			<strong><%- person_name_display %></strong>
+		</a>
 	</h4>
 	
 	<div class="badges">
 		<span class="employ-badge domain domain-<%= domain %> badge badge-success"><%- domain %></span>
-		<img class="employ-badge tikal-logo" src="../img/tikal-logo.jpg" alt="hired in tikal">
+		<img class="employ-badge tikal-logo" src="img/tikal-logo.jpg" alt="hired in tikal">
 	</div>
 	
 	<p>
@@ -14,13 +17,15 @@
 		</small>
 	</p>
 
-	<p class="<%- lead_name %>-show-lead">
+	<p class="lead-info <%- lead_name %>-show-lead">
 		<small>
-			<i class="icon-hand-right" title="lead"></i>: <%- lead_name %> is <%- lead_initiative %> recieved <%= lead_weeks_age %> weeks ago
+			<i class="icon-hand-right" title="lead" data-toggle="tooltip"></i>: <%- lead_name %> is <%- lead_initiative %> recieved <%= lead_weeks_age %> weeks ago
 		</small>
 	</p>
 	
-	<span class="age candidate-age badge badge-<%= candidate_weeks_age_display %>" title="candidate's weeks age"><i class="icon-time"></i> <%- candidate_weeks_age %></span>
+	<span class="age candidate-age badge badge-<%= candidate_weeks_age_display %>" title="candidate's weeks age" data-toggle="tooltip"><i class="icon-time"></i> <%- candidate_weeks_age %></span>
 
-	<span class="age lead-age badge badge-<%= lead_weeks_age_display %>" title="lead's weeks age"><i class="icon-time"></i> <%- lead_weeks_age %></span>
+	<span class="match-status match-<%= match_status %> badge badge-inverse pull-right" title="Match Status" data-toggle="tooltip"><i class="icon-map-marker"></i> <%- match_status %></span>
+
+	<span data-toggle="tooltip" class="age lead-age badge badge-<%= lead_weeks_age_display %>" title="lead's weeks age"><i class="icon-time"></i> <%- lead_weeks_age %></span>
 </div>
