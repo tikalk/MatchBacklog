@@ -14,8 +14,21 @@ define([
 			'click': 'importFromServer'
 		},
 
+		initialize: function(){
+			this.listenTo(this.collection, 'sync', this.removeLoading);
+		},
+
 		importFromServer: function(ev){
-			this.model.fetch();
+			this.renderLoading();
+			this.collection.fetch();
+		},
+
+		renderLoading: function(){
+			this.$el.addClass('loading');
+		},
+
+		removeLoading: function(){
+			this.$el.removeClass('loading');
 		}
 	});
 
