@@ -6,6 +6,7 @@
 
 	.person-card {
 		.card {
+			@radius: 5px;
 			.cursor(grab);
 			.box-shadow(0px 3px 2px -2px @shadow-color);
 			position: relative;
@@ -13,6 +14,8 @@
 			border-bottom: none;
 			padding: 8px;
 			margin-bottom: 10px;
+			border-top-left-radius: @radius;
+			border-bottom-left-radius: @radius;
 
 			&:hover {
 				.box-shadow(0 2px 13px -1px @shadow-color);
@@ -23,8 +26,8 @@
 			}
 
 			&.card-type-lead {
-				@color: lightskyblue;
-				#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%));
+				@red: #CB372C;
+				border-left: 4px solid @red;
 
 				.lead-age {
 					display: inline;
@@ -36,8 +39,8 @@
 			}
 
 			&.card-type-candidate {
-				@color: tomato;
-				#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%));
+				@blue: #3CA6A7;
+				border-left: 4px solid @blue;
 
 				.candidate-age {
 					display: inline;
@@ -49,8 +52,8 @@
 			}
 
 			&.card-type-match {
-				@color: mediumseagreen;
-				#gradient > .vertical(lighten(@color, 30%), lighten(@color,15%));
+				@green: #409E30;
+				border-left: 4px solid @green;
 
 				.candidate-age {
 					display: inline;
@@ -116,6 +119,12 @@
 			height: 24px;
 			margin-top: -1px;
 			// .box-shadow(0 0 2px gray);
+		}
+
+		.match-status {
+			&.match-Not {
+				color: yellow;
+			}
 		}
 
 		.recruit-status-hired {
