@@ -7,7 +7,7 @@ define([
     var PersonCollection = Backbone.Collection.extend({
 		model: PersonModel,
 		
-		url: '/get-workers.php',
+		url: 'get-workers.php',
 
 		initialize: function() {
 			// this.listenTo(this, 'reset', this.updatePlayedId);
