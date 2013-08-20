@@ -59,29 +59,28 @@ define([
 		},
 
 		filterPersons: function () {
-			var filters = _.union(_.flatten(_.map(this.model.filters(), function(filter) {
-				return filter.pluck('id');
-			})));
-			var filteredPersons = this.collection.filter(function(person){
-				return _.intersection(_.values(person.toJSON()), filters).length === filters.length;
-			});
+			var hasFilters = this.model.get('domains').length;
+			var domains = this.model.get('domains');
+			var match = this.model.get('match');
+			var recruit = this.model.get('recruit');
+			var filteredPersons = this.collection.models;
 
 			// the 'domains' id's are those to be rendered
-			// if (domains.length) {	
-			// 	filteredPersons = this.collection.filter(function(person){
-			// 		return domains.where({ "id": person.get('domain') }).length;
-			// 	});
-			// }
-			// if (match.length) {
-			// 	filteredPersons = _.filter(filteredPersons, function(person) {
-			// 		return match.where({ "id": person.get('match_status')}).length;
-			// 	});
-			// }
-			// if (recruit.length) {
-			// 	filteredPersons = _.filter(filteredPersons, function(person){
-			// 		return recruit.where({ "id": person.get('recruitment_status')}).length;
-			// 	});
-			// }
+			if (domains.length) {	
+				filteredPersons = this.collection.filter(function(person){
+					return domains.where({ "id": person.get('domain') }).length;
+				});
+			}
+			if (match.length) {
+				filteredPersons = _.filter(filteredPersons, function(person) {
+					return match.where({ "id": person.get('match_status')}).length;
+				});
+			}
+			if (recruit.length) {
+				filteredPersons = _.filter(filteredPersons, function(person){
+					return recruit.where({ "id": person.get('recruitment_status')}).length;
+				});
+			}
 			
 			if (filteredPersons) {
 				this.update(new Backbone.Collection(filteredPersons));
