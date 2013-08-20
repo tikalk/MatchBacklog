@@ -29,6 +29,13 @@ define([
 				"hired": "Tikal",
 				"": "Empty"
 			}
+		},
+
+		filters: function() {
+			var domains = this.get('domains');
+			var match = this.get('match');
+			var recruit = this.get('recruit');
+			return 	[domains, match, recruit];
 		}
 	});
 
