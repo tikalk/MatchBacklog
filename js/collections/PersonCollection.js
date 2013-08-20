@@ -8,6 +8,7 @@ define([
 		model: PersonModel,
 		
 		url: 'get-workers.php',
+		// url: 'js/mock/mockData.json',
 
 		initialize: function() {
 			// this.listenTo(this, 'reset', this.updatePlayedId);

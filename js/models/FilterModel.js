@@ -5,7 +5,9 @@ define([
    
     var FilterModel = Backbone.Model.extend({
 		defaults: {
-			id: ''
+			id: '',
+			// displayed label for rendering
+			label: ''
 		}
 	});
    

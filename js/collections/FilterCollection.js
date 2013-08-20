@@ -20,6 +20,13 @@ define([
 			this.remove({
 				id: val
 			});
+		},
+
+		getDisplayLabel: function (label) {
+			if (this.labelsMap) {
+				return this.labelsMap[label] || label;
+			}
+			return label;
 		}
 	});
    

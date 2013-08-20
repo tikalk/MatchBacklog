@@ -53,6 +53,13 @@ define([
 					filter: 'match_status'
 				}),
 
+				recruitFilter: new Filter({
+					el: '#recruit-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('recruit'),
+					filter: 'recruitment_status'
+				}),
+
 				settingsView: new SettingsView({
 					model: this.model.get('settings')
 				}),

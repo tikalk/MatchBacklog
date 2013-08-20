@@ -41,8 +41,13 @@ define([
 
 		preRenderFilter: function(filter) {
 			//this.model.get('domains').get(domain) ? 'active' : '';
-			var active = this.filters.get(filter) ? 'active' : '';;
-			return this.template({ filter: filter, active: active });
+			var active = this.filters.get(filter) ? 'active' : '';
+			var label = this.filters.getDisplayLabel(filter);
+			return this.template({ 
+				filter: filter, 
+				active: active, 
+				label: label
+			});
 		},
 
 		onFilterClick: function (ev) {
