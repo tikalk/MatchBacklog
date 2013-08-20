@@ -52,6 +52,17 @@
 									</div>
 								</div>
 
+								<div class="nav data-filter">
+									<a class="navbar-text">
+										<i class="icon-filter"></i>
+									</a>
+
+									<div id="recruit-filter" class="btn-group">
+										<div class="btn-group" data-toggle="buttons-checkbox"></div>
+										<button class="btn btn-link clear-filter" value="clear">clear</button>
+									</div>
+								</div>
+
 								<div id="settings-toggle" class="nav settings pull-right">
 									
 								  	<button class="btn"><i class="icon-gear"></i></button>
@@ -62,8 +73,9 @@
 								  <button id="import-manager" class="btn btn-primary" title="Import New CSV">
 								  	<i class="icon-signin"></i><input type="file" >
 								  </button>
-								  <button id="import-server" class="btn btn-primary" title="Import data from server">
+								  <button id="import-server" class="btn btn-primary loading" title="Import data from server">
 								  	<i class="icon-building"></i>
+								  	<i class="icon-spinner icon-spin"></i>
 								  </button>
 								</div>
 							</div>

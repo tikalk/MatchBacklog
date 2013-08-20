@@ -43,7 +43,7 @@ define([
 				}),
 
 				importServer: new ImportServer({
-					model: this.model.get('workers')
+					collection: this.model.get('workers')
 				}),
 
 				matchFilter: new Filter({
@@ -51,6 +51,13 @@ define([
 					collection: this.model.get('workers'),
 					filters: this.model.get('match'),
 					filter: 'match_status'
+				}),
+
+				recruitFilter: new Filter({
+					el: '#recruit-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('recruit'),
+					filter: 'recruitment_status'
 				}),
 
 				settingsView: new SettingsView({

@@ -7,7 +7,8 @@ define([
     var PersonCollection = Backbone.Collection.extend({
 		model: PersonModel,
 		
-		url: '/get-workers.php',
+		url: 'get-workers.php',
+		// url: 'js/mock/mockData.json',
 
 		initialize: function() {
 			// this.listenTo(this, 'reset', this.updatePlayedId);
