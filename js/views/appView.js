@@ -53,6 +53,20 @@ define([
 					filter: 'match_status'
 				}),
 
+				recruitFilter: new Filter({
+					el: '#recruit-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('recruit'),
+					filter: 'recruitment_status'
+				}),
+
+				typesFilter: new Filter({
+					el: '#types-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('types'),
+					filter: 'backlog_type'
+				}),
+
 				settingsView: new SettingsView({
 					model: this.model.get('settings')
 				}),
