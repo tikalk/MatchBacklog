@@ -60,6 +60,13 @@ define([
 					filter: 'recruitment_status'
 				}),
 
+				typesFilter: new Filter({
+					el: '#types-filter',
+					collection: this.model.get('workers'),
+					filters: this.model.get('types'),
+					filter: 'backlog_type'
+				}),
+
 				settingsView: new SettingsView({
 					model: this.model.get('settings')
 				}),

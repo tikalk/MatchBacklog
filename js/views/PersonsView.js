@@ -31,10 +31,10 @@ define([
 			};
 
 			this.listenTo(this.collection, 'reset destroy sort add remove', this.render);
-			// this.listenTo(this.collection, 'change', this.renderChange);
 			this.listenTo(this.model.get('domains'), 'add remove reset', this.filterPersons);
 			this.listenTo(this.model.get('match'), 'add remove reset', this.filterPersons);
 			this.listenTo(this.model.get('recruit'), 'add remove reset', this.filterPersons);
+			this.listenTo(this.model.get('types'), 'add remove reset', this.filterPersons);
 			this.listenTo(this.model.get('settings'), 'change', this.onSettingsChange);
 			this.collection.fetch({ reset: true });
 		},
@@ -44,13 +44,6 @@ define([
 			this.updateBySettings();
 		},
 
-		// renderChange: function(model){
-		// 	console.log('model changed', model);
-		// 	_.each(this.views, function(view){
-		// 		view.collection.set([model]);
-		// 	});
-		// },
-
 		update: function(persons) {
 			this.views.news.collection.reset(persons.where({ backlog_status: "1.New" }));
 			this.views.decision.collection.reset(persons.where({ backlog_status: "3.Decision" }));
@@ -59,28 +52,25 @@ define([
 		},
 
 		filterPersons: function () {
-			var hasFilters = this.model.get('domains').length;
-			var domains = this.model.get('domains');
-			var match = this.model.get('match');
-			var recruit = this.model.get('recruit');
-			var filteredPersons = this.collection.models;
-
-			// the 'domains' id's are those to be rendered
-			if (domains.length) {	
-				filteredPersons = this.collection.filter(function(person){
-					return domains.where({ "id": person.get('domain') }).length;
-				});
-			}
-			if (match.length) {
-				filteredPersons = _.filter(filteredPersons, function(person) {
-					return match.where({ "id": person.get('match_status')}).length;
-				});
-			}
-			if (recruit.length) {
-				filteredPersons = _.filter(filteredPersons, function(person){
-					return recruit.where({ "id": person.get('recruitment_status')}).length;
-				});
-			}
+			var filters = [
+				{
+					filter: this.model.get('domains'),
+					id: 'domain'
+				},
+				{
+					filter: this.model.get('match'),
+					id: 'match_status'
+				},
+				{
+					filter: this.model.get('recruit'),
+					id: 'recruitment_status'
+				},
+				{
+					filter: this.model.get('types'),
+					id: 'backlog_type'
+				}
+			];
+			var filteredPersons = _.reduce(filters, this.parseFilters, this.collection.models);
 			
 			if (filteredPersons) {
 				this.update(new Backbone.Collection(filteredPersons));
@@ -89,6 +79,17 @@ define([
 			// if domains is empty than all persons should be shown
 			this.render();
 
+		},
+
+		parseFilters: function (items, config) {
+			var filter = config.filter;
+			var id = config.id;
+			if (config.filter.length) {
+				items = _.filter(items, (function(person){
+					return filter.where({ "id": person.get(id) }).length;
+				}));	
+			}
+			return items;
 		},
 
 		onSettingsChange: function(settings){

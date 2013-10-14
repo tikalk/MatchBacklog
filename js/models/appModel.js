@@ -19,6 +19,7 @@ define([
 			domains: new FilterCollection(),
 			match: new FilterCollection(),
 			recruit: new FilterCollection(),
+			types: new FilterCollection(),
 			settings: new SettingsModel()
 		},
 
@@ -28,6 +29,12 @@ define([
 			this.get('recruit').labelsMap = {
 				"hired": "Tikal",
 				"": "Empty"
+			};
+
+			this.get('types').labelsMap = {
+				"1": "candidate",
+				"2": "match",
+				"3": "lead"
 			}
 		}
 	});
